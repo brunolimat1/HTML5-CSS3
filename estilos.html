@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Estilos de Textos</title>
 </head>
 <body>
     <h1 style="text-align: center;">Hierarquia de Títulos</h1>
     <p style="text-align: center;">Hierarquia de títulos &lt;h1 até o h6&gt;</p>
-<hr>
+    <a href="index.html" target="_self" title="Tela Inicial">Tela Inicial</a>
+    <a href="estilos.html" target="_self" title="Estilos de Texto">Estilos de Texto</a>
+    <hr>
     <h1>Titulo 1</h1>
     <h2>Titulo 2</h2>
     <h3>Titulo 3</h3>
@@ -51,12 +54,123 @@
             <li>Xbox Series X/S</li>
         </ul>
 <hr>
-    <p>Quando o parágrafo for grande eu quero que quebre em algum lugar específico, podemos utilizar a tag &lt;/br&gt;.
-    </p>
-    <br><br><br><br><br><br><!--Utilizar o <br> varias vezes para criar espaçamentos maiores é errado! O correto é fazer no CSS.-->
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste obcaecati tempore nemo, exercitationem saepe ratione possimus illo aliquid ipsam ab maiores impedit molestias. Quas tempore, tempora aspernatur ea repellat perspiciatis. lor</p>
+    <p>Quando o parágrafo for grande eu quero que quebre em algum lugar específico, podemos utilizar a tag &lt;/br&gt;.</p>
+    <!--Utilizar o <br> varias vezes para criar espaçamentos maiores é errado! O correto é fazer no CSS.-->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste obcaecati tempore nemo, <br> exercitationem saepe ratione possimus illo aliquid ipsam ab maiores impedit molestias. Quas tempore, tempora aspernatur ea repellat perspiciatis. lor</p>
 <hr>
-    <h1></h1>
+    <b>Este texto está em negrito</b> <br>
+    <strong>Este texto está com ênfase</strong> <br>
+    <i>Este texto está em itálico</i> <br>
+    <em>Ênfase. É parecido em o itálico</em> <br>
+    <mark style="background-color: greenyellow;">Marca Texto</mark> <br>
+    O marca texto sem css fica com a <mark>Cor Amarela</mark> <br>
+    Aqui o <del>texto está como excluido</del> para indicar que ele pode ser lido, mas não considerado! <br>
+    Aqui o <ins>texto foi inserido</ins> para indicar que ele foi adicionado depois. <br>
+    Existe também a tag <u>sublinhado</u> <br>
+    <em> <strong>Este texto está em Negrito e itálico</strong> </em> <br>
+    Aqui é um <big>Texto grande</big> e um <small>Texto pequeno.</small> <br>
+    <address>Rua ABC, 123 - Jackson Five</address>
+    (H <sub>2</sub> 0) &nbsp; ou &nbsp; (x <sup>2</sup>) <br>
+<hr>
+    <h2>Código-Fonte</h2>
+    O comando: <q><code>document.getElementByID('Olá')</code></q>, é escrito na linguagem <strong>JavaScript</strong>. <br>
+    <pre>
+Exemplo de Código pré-formatado:
+        <code> 
+var num = 10;
+    if (num % 2 === 0) { 
+        console.log('Par');
+    } else {
+        console.log('Ímpar');
+    }
+        </code>
+    </pre>
+<hr>
+    <p>
+        <pre>
+Olá! 
+Tudo bem?
+
+Estou bem e você?
+        </pre>
+    </p>
+    
+<hr>
+    <h2>Citações</h2>
+    Galileu disse: <em><q>A matemática é o alfabeto com o qual Deus escreve o universo.</q></em> <br>
+    <p>Segundo Valeria Nunes de Almeida, em seu livro:</p>
+    <blockquote cite="https://www.frasesfamosas.com.br"><em><q>
+        A matemática é moleza porque trata-se de uma ciência exata, na qual, a ciência humana entra apenas como agente de execução, e não como sujeito de interação.
+    </q></em></blockquote>
+<hr>
+    <p id="Lenda">Estou fazendo um curso técnico no Senac Tatuapé, neste momento estamos aprendendo <abbr title="Hyper Text Markup Language">HTML5</abbr> e <abbr title="Cascating Style Sheets">CSS3</abbr>.
+    </p>
+
+   <hr>
+   
+   <h2>Listas Ordenadas e Não Ordenadas</h2>
+   <h3>Listas Ordenadas:</h3>
+   <ol>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript</li>
+   </ol>
+
+   <ol type="A"> <!-- A, a, I, i, 1-->
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript</li>
+   </ol>
+
+   <ol type="I" start="3">
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>
+        JavaScript
+        <ol type="a">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ol>
+    </li>
+   </ol><br>
+   <h3>Listas Não Ordenadas:</h3>
+
+   <ul>
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Café</li>
+        <li>Açucar</li>
+        <li>Manteiga</li>
+        <li>Mamão
+    </ul>
+
+   <ul type="square"> <!--Square, Circle, Disc-->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Café</li>
+        <li>Açucar</li>
+        <li>Manteiga</li>
+        <li>Mamão
+            <ul type="circle">
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Café</li>
+                <li>Açucar</li>
+                <li>Manteiga</li>
+                <li>Mamão
+                    <ul type="disc">
+                        <li>Pão</li>
+                        <li>Leite</li>
+                        <li>Café</li>
+                        <li>Açucar</li>
+                        <li>Manteiga</li>
+                        <li>Mamão</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+   </ul>
 
 
 </body>
