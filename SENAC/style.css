@@ -81,6 +81,7 @@ body{
 .rodape{
     clear: both;
     border-top: 1px solid #004c94;
+    
 }
 
 .rodape p{
@@ -126,3 +127,5 @@ ul, ol{
     height: 150px;
     padding: 10px;
 }
+
+
