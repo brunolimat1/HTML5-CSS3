@@ -1,111 +1,293 @@
 @charset "UTF-8";
 
-/* Reset CSS */
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
 }
 
-/* Fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-/* Estilos Gerais */
-body {
+body{
+    font-size: 1em;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-    color: #333;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-a {
+.botao{
     text-decoration: none;
-    color: #0073e6;
+    color: #FFF;
+    font-size: 1.3em;
+    background-color: #004560;
+    padding: 10px 40px;
+    border: 2px solid #FFF;
+    border-radius: 25px;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #0073e6;
-    color: #fff;
-    padding: 20px 0;
+.container{
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex2{
+    display: flex;
+    align-items: center;    
+}
+.flex3{
+    display: flex;
+    flex-direction: column;
+}
+.flex4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.card{
+    margin-top: 25px;
+    width: 338px;
+    height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
     text-align: center;
 }
+.card img{
+    border-radius: 25px 0px;
+}
 
-header h1 {
-    font-size: 36px;
+/*Smartphone Portrait*/
+header{
+    height: 60px;
+}
+#logo img{
+    width: 128px;
+    height: 128px;
+}
+#check{
+    display: none;
+}
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 25px;
+    color: #004560;
+}
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+#check:checked ~ ul{
+    right: 0;
+}
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FFF;
+}
+main{
+    height: 75vh;
+    background: url(img/banner_front.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+main h1{
+    font-size: 2.5em;
+    color: #FFF
+}
+main h2{
+    font-size: 1em;
+    margin: 20px 0px 50px 0px;
+    color: #FFF;
+}
+#sobre{
+    padding: 50px 0px;
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.destaque_sobre{
+    display: none;
+}
+#texto_sobre{
+    color: #fff;
+    padding: 0px 10px;
+}
+#texto_sobre h2{
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+#texto_sobre p{
+    font-size: 1.2em;
+}
+.topico_sobre{
+    margin-top: 20px;
+}
+.topico_sobre img{
+    margin-right: 10px;
+}
+#onepage{
+    padding: 50px 10px;
+}
+#onepage h2{
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+#onepage p{
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+#video iframe{
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
+#wireframe{
+    padding: 50px 0px;
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#texto_wireframe{
+    color: #FFF;
+    padding: 0px 10px;
+}
+#texto_wireframe h2{
+    font-size: 2em;
     margin-bottom: 10px;
 }
-
-.header-description {
-    font-size: 18px;
+#texto_wireframe p{
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+#texto_wireframe span{
+    display: none;
+}
+#qrcode{
+    display: inline;
 }
 
-/* Botão */
-.botao {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    background-color: #004560;
-    padding: 12px 24px;
-    border: 2px solid #002745;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+#qrcode img{
+    width: 225px;
+    height: 225px;
 }
 
-.botao:hover {
-    background-color: #002745;
-}
 
-/* Seção de Conteúdo */
-.content {
-    padding: 40px 0;
-}
 
-.content h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
 
-/* Media Queries */
-@media (max-width: 1200px) {
-    .container {
-        padding: 20px;
+/*Smartphone landscape*/
+@media (min-width: 576px){
+    
+    .container{
+        max-width: 540px;        
+    }
+    main h1, main h2{
+        text-shadow: #000 0.5em 0.5em 0.5m;
+    }
+ }
+
+/*Tablet Portrait*/
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;        
+    }
+    main{
+        height: 45vh;
+    }
+    main h1{
+        font-size: 5.5em;
+    }
+    main h2{
+        font-size: 2em;
+    }
+ }
+
+/*Tablet landscape*/
+@media (min-width: 992px){ 
+    .container{
+        max-width: 960px;
+    }
+    main{
+        height: 70vh;
     }
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
+/*PC*/
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;        
+    }
+    header{
+        height: 120px;
+    }
+    #logo img{
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    label{
+        display: none;
+    }
+    nav ul{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    nav ul li a{
+        color: #343538;
+    }
+    nav ul li a:hover{
+        color:#004560;
+    }
+    .destaque_sobre{
+        display: inline;
+    }
+    .destaque_sobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+    #sobre{
+        background-attachment: fixed; /*efeito parallax*/
+    }
+    .flex3{
+        flex-direction: row;
+        align-items: center;
+    }
+    #wireframe{
+        background-attachment: fixed; /*efeito parallax*/
     }
 
-    .header-description {
-        font-size: 16px;
+    #wireframe span{
+        display: inline;
+        color: #004560;
+        font-weight: 700;
     }
 
-    .botao {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .content h2 {
-        font-size: 20px;
-    }
-}
+ }
